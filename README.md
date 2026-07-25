@@ -144,11 +144,7 @@ Current blueprint categories include:
 Automation Architecture Blueprints
 
 ├── 🤖 AI Blueprints
-├── 📊 Data Blueprints
-├── 🔗 Integration Blueprints
-├── 🔄 Workflow Blueprints
-├── 🔐 Identity & Security Blueprints
-└── 📋 Governance Blueprints
+└── 🔗 Integration Blueprints
 ```
 
 These categories will continue expanding as new architectural concepts are developed.
