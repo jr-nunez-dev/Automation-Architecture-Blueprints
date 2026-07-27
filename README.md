@@ -6,7 +6,7 @@
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
 **Automation Architecture Blueprints** is a collection of original automation architecture designs that document how scalable, maintainable, and production-inspired automation systems can be engineered using **n8n**.
 
@@ -18,7 +18,7 @@ The accompanying workflow implementations (when available) serve only as **refer
 
 ---
 
-# 💡 Original Blueprint Philosophy
+## 💡 Original Blueprint Philosophy
 
 Every architecture documented in this repository is an **original blueprint** designed by the repository author.
 
@@ -36,7 +36,7 @@ These documents are **not presented as industry standards**, but as thoughtfully
 
 ---
 
-# 🎯 Repository Goals
+## 🎯 Repository Goals
 
 This repository aims to:
 
@@ -49,7 +49,7 @@ This repository aims to:
 
 ---
 
-# ❓ Why This Repository Exists
+## ❓ Why This Repository Exists
 
 Many workflow repositories explain **how** an automation works.
 
@@ -68,7 +68,7 @@ The objective is to teach **automation architecture**, not simply workflow const
 
 ---
 
-# 🏛️ Blueprint Documentation Standard
+## 🏛️ Blueprint Documentation Standard
 
 Every blueprint follows the same documentation structure.
 
@@ -96,47 +96,47 @@ This consistent format ensures every architecture is documented from both a busi
 
 ---
 
-# 🧠 Engineering Philosophy
+## 🧠 Engineering Philosophy
 
 The blueprints in this repository are built around several core principles.
 
-## Separation of Concerns
+### Separation of Concerns
 
 Each module should have a single responsibility.
 
 ---
 
-## Data-Driven Design
+### Data-Driven Design
 
 Business behavior should be determined by data rather than duplicated workflow logic.
 
 ---
 
-## Reusable Components
+### Reusable Components
 
 Architectures should encourage modularity and reuse whenever possible.
 
 ---
 
-## Scalability
+### Scalability
 
 Blueprints should support future expansion without major redesign.
 
 ---
 
-## Maintainability
+### Maintainability
 
 Automation systems should remain understandable months or years after implementation.
 
 ---
 
-## Documentation First
+### Documentation First
 
 A well-designed automation should be understandable before opening the workflow editor.
 
 ---
 
-# 📂 Blueprint Categories
+## 📂 Blueprint Categories
 
 Current blueprint categories include:
 
@@ -151,7 +151,7 @@ These categories will continue expanding as new architectural concepts are devel
 
 ---
 
-# 🏗️ Reference Implementations
+## 🏗️ Reference Implementations
 
 Many blueprints are accompanied by practical implementations located in other repositories.
 
@@ -179,7 +179,7 @@ This separation allows architectural concepts to remain reusable while implement
 
 ---
 
-# 🚀 Long-Term Vision
+## 🚀 Long-Term Vision
 
 The long-term vision of this repository is to become a personal **Automation Architecture Handbook** documenting reusable engineering concepts that can be applied across industries, technologies, and business domains.
 
@@ -187,7 +187,7 @@ Rather than collecting workflow exports, this project aims to build a knowledge 
 
 ---
 
-# 📌 Important Notice
+## 📌 Important Notice
 
 Every blueprint contained within this repository is an **original automation architecture** created by the repository author.
 
@@ -197,7 +197,7 @@ Reference implementations may evolve over time, but the architectural concepts r
 
 ---
 
-# 🤝 Contributions
+## 🤝 Contributions
 
 Discussions, suggestions, and alternative architectural approaches are always welcome.
 
@@ -205,6 +205,6 @@ Architecture is about exploring trade-offs, and multiple valid solutions may exi
 
 ---
 
-# 📜 License
+## 📜 License
 
 MIT License
