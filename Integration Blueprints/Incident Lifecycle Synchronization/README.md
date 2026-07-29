@@ -211,7 +211,7 @@ Individual technologies may vary while preserving the same architectural flow.
 
 ---
 
-##💡 Best Practices
+## 💡 Best Practices
 
 - Design synchronization to be idempotent.
 - Externalize business rules whenever practical.
