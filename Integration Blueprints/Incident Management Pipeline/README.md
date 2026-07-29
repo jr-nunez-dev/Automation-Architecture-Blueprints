@@ -1,4 +1,4 @@
-# Incident Management Pipeline Pattern
+# 🚨 Incident Management Pipeline Pattern
 
 > 💡 **Original Blueprint Notice**
 >
@@ -16,7 +16,7 @@ The pattern promotes consistency, scalability, and maintainability across IT ope
 
 ---
 
-# ❗ Problem
+## ❗ Problem
 
 Modern organizations operate multiple monitoring systems capable of generating thousands of alerts every day.
 
@@ -34,7 +34,7 @@ As monitoring environments grow, manual incident processing becomes increasingly
 
 ---
 
-# 🎯 When to Use
+## 🎯 When to Use
 
 Use this pattern whenever events must be converted into standardized operational incidents.
 
@@ -51,7 +51,7 @@ Common scenarios include:
 
 ---
 
-# 🏗️ Architecture
+## 🏗️ Architecture
 
 ```text
 Monitoring Platform
@@ -88,11 +88,11 @@ Incident Object
 
 ---
 
-# ⚙️ Design Considerations
+## ⚙️ Design Considerations
 
 When implementing this pattern, consider the following engineering decisions.
 
-## Event Normalization
+### Event Normalization
 
 Normalize incoming monitoring events into a consistent structure before business logic begins.
 
@@ -100,7 +100,7 @@ This allows downstream components to remain reusable.
 
 ---
 
-## Configuration-Driven Design
+### Configuration-Driven Design
 
 Avoid hardcoding:
 
@@ -113,7 +113,7 @@ Store these externally whenever possible.
 
 ---
 
-## Duplicate Detection
+### Duplicate Detection
 
 Prevent repeated alerts from generating duplicate incidents.
 
@@ -126,7 +126,7 @@ Common techniques include:
 
 ---
 
-## Context Enrichment
+### Context Enrichment
 
 Operational events should be enriched with business context such as:
 
@@ -138,7 +138,7 @@ Operational events should be enriched with business context such as:
 
 ---
 
-## Modular Components
+### Modular Components
 
 Separate responsibilities into logical modules.
 
@@ -152,7 +152,7 @@ Examples:
 
 ---
 
-# 🔄 Workflow Implementation
+## 🔄 Workflow Implementation
 
 Typical workflow stages include:
 
@@ -169,7 +169,7 @@ Typical workflow stages include:
 
 ---
 
-# ✅ Advantages
+## ✅ Advantages
 
 - Standardized incident processing
 - Reduced manual effort
@@ -182,7 +182,7 @@ Typical workflow stages include:
 
 ---
 
-# ⚠️ Limitations
+## ⚠️ Limitations
 
 Without additional supporting systems, implementations may still require:
 
@@ -195,7 +195,7 @@ Organizations requiring enterprise-scale implementations may integrate CMDBs, se
 
 ---
 
-# 💡 Best Practices
+## 💡 Best Practices
 
 - Normalize data early.
 - Build a standardized incident object.
@@ -208,7 +208,7 @@ Organizations requiring enterprise-scale implementations may integrate CMDBs, se
 
 ---
 
-# 🔗 Common Integrations
+## 🔗 Common Integrations
 
 This pattern is commonly implemented alongside:
 
@@ -225,7 +225,7 @@ This pattern is commonly implemented alongside:
 
 ---
 
-# 🔄 Related Patterns
+## 🔄 Related Patterns
 
 - Event-Driven Automation Pattern
 - Configuration-Driven Routing Pattern
@@ -236,7 +236,7 @@ This pattern is commonly implemented alongside:
 
 ---
 
-# 📦 Example n8n Workflow
+## 📦 Example n8n Workflow
 
 Repository Reference:
 
