@@ -16,7 +16,7 @@ The pattern promotes consistency, scalability, and maintainability across IT ope
 
 ---
 
-## ❗ Problem
+## ❗Problem
 
 Modern organizations operate multiple monitoring systems capable of generating thousands of alerts every day.
 
