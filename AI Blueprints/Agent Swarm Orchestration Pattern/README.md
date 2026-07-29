@@ -225,7 +225,7 @@ This implementation remains independent of any specific AI model or communicatio
 
 ---
 
-##💡 Best Practices
+## 💡 Best Practices
 
 - Assign one responsibility per agent.
 - Standardize agent architecture.
