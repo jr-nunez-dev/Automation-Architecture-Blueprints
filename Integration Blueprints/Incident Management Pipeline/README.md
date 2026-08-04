@@ -54,20 +54,68 @@ Common scenarios include:
 ## 🏗️ Architecture
 
 ```text
-[Source Event] received (Type A or Type B)
- └─ parse + debounce + dedupe
-     └─ [Type Router]?
-         ├─ TYPE A
-         │    └─ [Terminated]?
-         │         ├─ YES → find record → exists? → delete   (cleanup)
-         │         └─ NO  → map → update record               (sync)
-         └─ TYPE B
-              └─ [Subtype Router]?
-                   ├─ SUBTYPE 2   → map → update subtype record  (sync)
-                   └─ SUBTYPE 1   → [Terminated]?
-                                        ├─ YES → find record → exists? → delete (cleanup)
-                                        └─ NO  → map → update record             (sync)
-     → all sync paths → merge → calculate summary → downstream workflow
+┌─────────────────────────────────────────────────────────────┐
+│  PHASE 1 — INGESTION & CLASSIFICATION                        │
+└─────────────────────────────────────────────────────────────┘
+    [Source Event]
+         │
+         ▼
+    Receive Event
+         │
+         ▼
+    Validate Event
+         │
+         ▼
+    Normalize Data
+         │
+         ▼
+    Duplicate Detection
+         │
+         ▼
+    Context Enrichment
+         │
+         ▼
+    Priority Classification
+         │
+         ▼
+    Incident Object ──────────────┐
+         │                        │
+         ▼                        │
+ ┌───────────────┐                │
+ │ Notifications │                │
+ │ Ticketing     │◄── creates a ticket in the
+ │ Dashboard     │    system(s) tracked below
+ │ Audit Logs    │                │
+ └───────────────┘                │
+                                   │
+┌──────────────────────────────────────────────────────────────┐
+│  PHASE 2 — LIFECYCLE SYNCHRONIZATION                          │
+└──────────────────────────────────────────────────────────────┘
+                                   │
+    [Ticket Updated] (Type A or Type B) ◄── ticket from Phase 1
+         │
+         ▼
+    parse + debounce + dedupe
+         │
+         ▼
+    [Type Router]?
+     ├─ TYPE A
+     │    └─ [Terminated]?
+     │         ├─ YES → find record → exists? → delete   (cleanup)
+     │         └─ NO  → map → update record               (sync)
+     └─ TYPE B
+          └─ [Subtype Router]?
+               ├─ SUBTYPE 2   → map → update subtype record  (sync)
+               └─ SUBTYPE 1   → [Terminated]?
+                                    ├─ YES → find record → exists? → delete (cleanup)
+                                    └─ NO  → map → update record             (sync)
+         │
+         ▼
+    all sync paths → merge → calculate summary → downstream workflow
+                                                        │
+                                                        ▼
+                                              (feeds back into Dashboard /
+                                               Audit Logs from Phase 1)
 ```
 
 ---
