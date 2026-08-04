@@ -1,5 +1,9 @@
 # Incident Management Pipeline Pattern
 
+> 💡 **Original Blueprint Notice**
+>
+> This blueprint represents an original automation architecture designed by the repository author. It documents a reusable engineering approach for synchronizing entity lifecycle changes between systems using event-driven automation. While inspired by real-world operational requirements, the architectural decisions, workflow organization, and synchronization strategy are original and intended as a reusable reference rather than an industry standard.
+
 ## 📖 Overview
 The **Incident Management Pipeline Pattern** is an event-driven automation architecture that standardizes both incident creation and incident lifecycle synchronization. 
 
